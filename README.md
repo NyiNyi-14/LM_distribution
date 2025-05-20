@@ -42,12 +42,15 @@ Download or clone the repository:
 
 ```bash
 git clone https://github.com/NyiNyi-14/LM_distribution.git
-cd LM-droplet-analysis
 ```
 
-Make sure all scripts and videos are in the same directory or update paths accordingly in the code.
+Make sure all scripts and videos are in the same directory.
 
-### Step 2: Image Preprocessing
+### Step 2: Update the Working Directories
+
+Before running the code, set the appropriate input and output paths in the script, `run_main.py`, to specify where the extracted frames and results should be saved.
+
+### Step 3: Image Preprocessing
 
 Run the main image processing pipeline:
 
@@ -55,7 +58,6 @@ Run the main image processing pipeline:
 python run_main.py
 ```
 
-- Adjust paths in `run_main.py` to point to your video and frame folders.
 - This script will extract frames, apply DCT/IDCT, DnCNN denoising, CLAHE contrast enhancement, edge detection, and contour analysis.
 
 ---
@@ -105,9 +107,12 @@ If you use this work, please cite the related paper as follows:
 
 ---
 
-## 🧑‍💻 Author
+## Author
 
-**Nyi Nyi Aung** – PhD Student
-Department of Mechanical and Industrial Engineering  
-[Louisiana State University]
+**Nyi Nyi Aung** 
 
+PhD Student, Mechanical and Industrial Engineering - LSU, USA
+
+MSc, Sustainable Transportation and Electrical Power Systems - UniOvi, Spain
+
+BE, Electrical Power - YTU, Myanmar

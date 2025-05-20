@@ -62,22 +62,27 @@ python run_main.py
 
 ## Outputs
 
-- Processed images with labeled contours and centroids
+- Step by step image preprocessing for (a-d) deforming and (e-h) merging case. 
+    - (a,e) Original frames; 
+    - (b,f) Grayscale conversion followed by DCT and IDCT to suppress high frequency components; 
+    - (c,g) Denoising using DnCNN by removing the estimated noise; 
+    - (d,h) Contrast enhancement applied to highlight droplet boundaries and improve separation from the background.
+
 ![Sample Frame](media/preprocessed_frames.png)
-- Trajectory plots of tracked droplets
+
+- Step by step feature extraction for merging case.
+    - (a) Illustration of hysteresis thresholding, pixel A is a sure-edge, B is a non-edge, and C is considered an edge based on its connectivity to A;
+    - (b) Edge detection output highlighting partially unclosed regions;
+    - (c) Morphological closing operation to address the unclosed edges from edge detection;
+    - (d) Contour extraction used to compute the centroid and area of each droplet.
+
 ![Sample Frame](media/feature_ext.png)
-- Area and position data for each droplet
+
+- Spatial distribution of detected LM droplet centroids with unique identifiers and color coded labels.
+
 <p align="center">
-  <img src="media/motion_tracking.png" width="600">
+  <img src="media/motion_tracking.png" width="500">
 </p>
-
----
-
-## Notes
-
-- All area and position measurements are in pixel units.
-- For physical unit conversion (e.g., mm²), a real-world calibration must be performed.
-- Only two droplets were physically measured in this proof-of-concept.
 
 ---
 

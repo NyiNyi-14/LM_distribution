@@ -65,7 +65,9 @@ python run_main.py
 - Processed images with labeled contours and centroids
 ![Sample Frame](media/preprocessed_frames.png)
 - Trajectory plots of tracked droplets
+![Sample Frame](media/feature_ext.png)
 - Area and position data for each droplet
+![Sample Frame](media/motion_tracking.png)
 
 ---
 

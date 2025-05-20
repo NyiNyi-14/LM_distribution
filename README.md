@@ -1,48 +1,30 @@
-<!-- # LM_distribution
+# From Pixels to Patterns: Computer Vision Based Identification and Tracking of Liquid Metal Droplets
 
-This repository contains all the necessary files for running the adaptive PID control simulations and related tasks.
-
----
-
-## 📁 Project Structure
-
-All source code files are organized under a single directory for ease of use.
-
-i_PID/
-├── run_main.py               # Main entry point of the project
-├── requirements.txt          # List of required Python packages
-├── README.md                 # This file
-├── [*.py files]              # Supporting modules/scripts
-└── [your output folders]     # Directories to save frames/results -->
-
-# LM Droplet Detection and Motion Prediction via Image Processing and EDMD
-
-This repository contains the code, data, and methods used to analyze the behavior of liquid metal (LM) droplets under substrate vibration. It includes an image processing pipeline for detecting and tracking LM droplets from microscope video sequences, and implements Extended Dynamic Mode Decomposition (EDMD) to explore their motion dynamics.
+This repository contains the code, data, and methods used to analyze the behavior of liquid metal (LM) droplets under substrate vibration. It includes an image processing pipeline for detecting and tracking LM droplets from microscope video sequences, and feature extraction.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-- `videos/` – Original video files of LM droplet extrusion under vibration  
-- `frames/` – Extracted and preprocessed frames  
+- `frames_video/` – Original video file of LM droplet extrusion under vibration and extracted frames
+- `model/` - DnCNN models
 - `DCT_IDCT.py` – Blockwise DCT and IDCT functions for denoising  
 - `DnCNN.py` – Deep learning-based denoising network  
-- `LM_dist.py` – Main script for image preprocessing and feature extraction  
-- `LM_EDMD.py` – Script for performing EDMD analysis  
+- `run_main.py` – Main script for image preprocessing and feature extraction  
 - `README.md` – Project documentation  
 - `requirements.txt` – Required Python packages  
 
 ---
 
-## 🧪 Requirements
+## Requirements
 
 - Python 3.8+
-- NumPy
-- SciPy
-- Matplotlib
-- OpenCV
-- scikit-image
-- PyTorch (for DnCNN)
+- matplotlib==3.10.3
+- numpy==2.2.6
+- opencv_python==4.11.0.86
+- pandas==2.2.3
+- scipy==1.15.3
+- torch==2.6.0
 
 Install dependencies using:
 
@@ -52,14 +34,14 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Step 1: Setup
 
 Download or clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/LM-droplet-analysis.git
+git clone https://github.com/NyiNyi-14/LM_distribution.git
 cd LM-droplet-analysis
 ```
 
@@ -70,61 +52,53 @@ Make sure all scripts and videos are in the same directory or update paths accor
 Run the main image processing pipeline:
 
 ```bash
-python LM_dist.py
+python run_main.py
 ```
 
-- Adjust paths in `LM_dist.py` to point to your video and frame folders.
+- Adjust paths in `run_main.py` to point to your video and frame folders.
 - This script will extract frames, apply DCT/IDCT, DnCNN denoising, CLAHE contrast enhancement, edge detection, and contour analysis.
 
-### Step 3: EDMD Analysis
-
-To perform motion prediction using EDMD:
-
-```bash
-python LM_EDMD.py
-```
-
-This script builds snapshot matrices and applies the EDMD algorithm to model and analyze droplet dynamics.
-
 ---
 
-## 📊 Outputs
+## Outputs
 
 - Processed images with labeled contours and centroids
+![Sample Frame](media/preprocessed_frames.png)
 - Trajectory plots of tracked droplets
 - Area and position data for each droplet
-- EDMD results showing dynamic behavior
 
 ---
 
-## 📌 Notes
+## Notes
 
 - All area and position measurements are in pixel units.
 - For physical unit conversion (e.g., mm²), a real-world calibration must be performed.
-- Only one or two droplets were physically measured in this proof-of-concept.
+- Only two droplets were physically measured in this proof-of-concept.
 
 ---
 
-## 📚 Related Work
+## Related Work
 
 This project builds on image processing and scientific computing methods, including:
 
 - DCT-based denoising
 - Deep CNN-based denoising (DnCNN)
+- Contrast enhancement (CLAHE)
 - Edge detection & morphological operations
 - Feature tracking
 - Extended Dynamic Mode Decomposition (EDMD)
 
 ---
 
-## 📥 Citation
+## Citation
 
-If you use this work, please cite the related paper or include this project in your acknowledgements.
+If you use this work, please cite the related paper as follows:
 
 ---
 
 ## 🧑‍💻 Author
 
-**Nyi Nyi Aung** – PhD Student  
-Department of Electrical and Computer Engineering  
-[University Name]
+**Nyi Nyi Aung** – PhD Student
+Department of Mechanical and Industrial Engineering  
+[Louisiana State University]
+

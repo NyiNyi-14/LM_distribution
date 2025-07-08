@@ -114,8 +114,8 @@ PhD Student, Mechanical and Industrial Engineering - LSU, USA
 
 MSc, Sustainable Transportation and Electrical Power Systems - UniOvi, Spain
 
-BE, Electrical Power - YTU, Myanmar <br>
-
+BE, Electrical Power - YTU, Myanmar
+&nbsp; 
 
 **Adrian Stein, PhD**
 

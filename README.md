@@ -102,7 +102,7 @@ This project builds on image processing and scientific computing methods, includ
 
 ## Citation
 
-If you use this work, please cite the related paper as follows:
+To acknowledge the use of this work, please cite the following publication:
 
 ---
 

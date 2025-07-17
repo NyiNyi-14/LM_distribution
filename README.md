@@ -105,7 +105,7 @@ This project builds on image processing and scientific computing methods, includ
 To acknowledge the use of this work, please cite the following publication:
 
 ---
-
+<!-- 
 ## Author
 
 **Nyi Nyi Aung** 
@@ -124,4 +124,4 @@ Assistant Professor
 
 Department of Mechanical and Industrial Engineering
 
-Louisiana State University
+Louisiana State University -->

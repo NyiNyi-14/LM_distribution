@@ -2,7 +2,7 @@
 
 This repository contains the code, data, and methods used to analyze the behavior of liquid metal (LM) droplets under substrate vibration. It includes an image processing pipeline for detecting and tracking LM droplets from microscope video sequences, and feature extraction.
 
-*Note: Certain code segments have been omitted due to ongoing manuscript reviews.*
+*Note: Some code segments are temporarily omitted and will be updated later.*
 
 ---
 
